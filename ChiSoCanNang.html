@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng của cơ thể</h1>
+<p>Nhập cân nặng: <input type="text" id="cannang"></p>
+<p>Nhập chiều cao: <input type="text" id="chieucao"></p>
+<button onclick="tinhChiSoCanNang()">Kiểm Tra</button>
+<p id="result"></p>
+</body>
+<script>
+    function tinhChiSoCanNang() {
+    let canNang = document.getElementById('cannang').value;
+    let chieuCao = document.getElementById('chieucao').value;
+    let bmi = canNang/(chieuCao*chieuCao);
+    let result = "";
+
+            if (bmi <18.5){
+                result = "Underweight";
+            }else if (bmi >= 18.5 && bmi <25){
+                result = 'Normal';
+            }else if (bmi >= 25 && bmi <30){
+                result = 'Overweight';
+            }else {
+                result = 'obese';
+            }
+        document.getElementById("result").innerHTML = "Chỉ số BMI là: " + bmi + ". Bạn thuộc nhóm" + result;
+    }
+
+
+
+</script>
+</html>
