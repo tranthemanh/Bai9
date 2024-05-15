@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id="so1">
+    <input type="number" id="so2">
+<button onclick="ktra()">Kiem Tra</button>
+<p id="ketqua"></p>
+</body>
+<script>
+    function ktra() {
+        let a = document.getElementById('so1').value;
+        let b = document.getElementById('so2').value;
+        let kq = "";
+
+        if (a %b ===0){
+            kq = 'a chia het cho b'
+        }else {
+            kq = 'a khong chia het cho b'
+        }
+        document.getElementById('ketqua').innerHTML = kq;
+    }
+</script>
+</html>
