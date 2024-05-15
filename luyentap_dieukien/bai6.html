@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Nhập doanh số bán hàng: " id="doanhso">
+<button onclick="ktra()">Số Hoa Hồng</button>
+<p id="kt"></p>
+</body>
+<script>
+
+    function ktra() {
+        let ds = document.getElementById('doanhso').value;
+        let hh;
+
+        if (ds < 5000 ){
+            hh = ds*0.05;
+        }else if (ds < 10000){
+            hh = ds * 0.10;
+        }else if (ds < 20000){
+            hh = ds * 0.15;
+        }else{
+            hh = ds * 0.20;
+        }
+        document.getElementById('kt').innerHTML = 'Số hoa hồng của doanh số'+ ds + ' này là: '+hh +'.';
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Nhap so nguyen" id="songuyen">
+<button onclick="ktra()">Kiem Tra</button>
+<p id="kt"></p>
+</body>
+<script>
+    let a = "";
+    function ktra() {
+        let t = document.getElementById('songuyen').value;
+        if (t > 0){
+            a = 'So nguyen lon hon 0';
+        }else if (t == 0) {
+            a = 'So nguyen bang 0'
+        }else {
+            a = 'So nguyen nho hon 0'
+        }
+        document.getElementById('kt').innerHTML = a;
+    }
+</script>
+</html>

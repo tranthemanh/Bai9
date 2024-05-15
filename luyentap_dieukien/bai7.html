@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Nhập số phút sử dụng: " id="sophut">
+<button onclick="ktra()">Số cước phí</button>
+<p id="kt"></p>
+</body>
+<script>
+
+    function ktra() {
+        let sp = document.getElementById('sophut').value;
+        let cp;
+
+        if (sp <= 50 ){
+            cp = sp*600;
+        }else if (sp <= 100){
+            cp = (50 * 600) + ((sp - 50)*400);
+        }else{
+            cp = (50*600) + (50 * 400) + ((sp - 100)*200);
+        }
+        document.getElementById('kt').innerHTML = 'Số phút sử dụng là: '+ sp + '. Cước phí là: '+cp +'.';
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Điểm bài kiểm tra" id="ktra">
+<input type="number" placeholder="Điểm thi giữa kỳ" id="giuaky">
+<input type="number" placeholder="Điểm thi cuối kỳ" id="cuoiky">
+<button onclick="ktra()">Kiem Tra Hoc Luc</button>
+<p id="kt"></p>
+</body>
+<script>
+
+    function ktra() {
+        let diem1 = document.getElementById('ktra').value;
+        let diem2 = document.getElementById('giuaky').value;
+        let diem3 = document.getElementById('cuoiky').value;
+        let diemtb = (diem1*0.1) + (diem2*0.3)+ (diem3*0.6);
+        let xephang;
+
+        if (diemtb > 8 ){
+            xephang = 'Gioi';
+        }else if (diemtb < 5){
+            xephang = 'Yeu';
+        }else{
+            xephang = "Khá"
+        }
+        document.getElementById('kt').innerHTML = 'Điểm trung bình của bạn là: '+diemtb +'. Bạn xếp loại '+ xephang;
+    }
+</script>
+</html>

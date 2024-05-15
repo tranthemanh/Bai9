@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Nhap tuoi hoc sinh" id="tuoi">
+<button onclick="ktra()">Kiem Tra</button>
+<p id="kt"></p>
+</body>
+<script>
+    let a = "";
+    function ktra() {
+        let t = document.getElementById('tuoi').value;
+        if (t >= parseInt(16)){
+            a = 'Ban du tuoi hoc lop 10'
+        }else {
+            a = 'Ban khong du tuoi hoc lop 10'
+        }
+        document.getElementById('kt').innerHTML = a;
+    }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Nhap so nguyen 1" id="songuyen1">
+<input type="number" placeholder="Nhap so nguyen 2" id="songuyen2">
+<input type="number" placeholder="Nhap so nguyen 3" id="songuyen3">
+<button onclick="ktra()">Kiem Tra So Nguyen Lon Nhat</button>
+<p id="kt"></p>
+</body>
+<script>
+
+    function ktra() {
+        let so1 = document.getElementById('songuyen1').value;
+        let so2 = document.getElementById('songuyen2').value;
+        let so3 = document.getElementById('songuyen3').value;
+
+        let max = so1;
+         if (so2 > max){
+             max = so2;
+         }
+         if (so3 > max){
+             max = so3;
+         }
+        document.getElementById('kt').innerHTML = 'Gia tri lon nhat bang: '+ max;
+    }
+</script>
+</html>
