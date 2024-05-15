@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Nhập hệ số a, b, c từ người dùng
+    let a = parseFloat(prompt("Nhập hệ số a của phương trình:"));
+    let b = parseFloat(prompt("Nhập hệ số b của phương trình:"));
+    let c = parseFloat(prompt("Nhập hệ số c của phương trình:"));
+
+    // Tính delta (bình phương của b - 4ac)
+    let delta = b * b - 4 * a * c;
+
+    // Kiểm tra delta
+    if (delta < 0) {
+        alert("Phương trình vô nghiệm.");
+    } else if (delta === 0) {
+        let x = -b / (2 * a);
+        alert("Phương trình có nghiệm kép: x = " + x);
+    } else {
+        let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        alert("Phương trình có hai nghiệm phân biệt:");
+        alert("x1 = " + x1);
+        alert("x2 = " + x2);
+    }
+</script>
+</body>
+</html>

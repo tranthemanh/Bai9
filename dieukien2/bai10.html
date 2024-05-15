@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhGiaDien(soDienTieuThu) {
+        let giaDien = 0;
+
+        if (soDienTieuThu <= 50) {
+            giaDien = soDienTieuThu * 1500;
+        } else if (soDienTieuThu <= 100) {
+            giaDien = 50 * 1500 + (soDienTieuThu - 50) * 2000;
+        } else if (soDienTieuThu <= 200) {
+            giaDien = 50 * 1500 + 50 * 2000 + (soDienTieuThu - 100) * 2500;
+        } else {
+            giaDien = 50 * 1500 + 50 * 2000 + 100 * 2500 + (soDienTieuThu - 200) * 3000;
+        }
+
+        return giaDien;
+    }
+
+    // Nhập số điện tiêu thụ từ người dùng
+    let soDienTieuThu = parseInt(prompt("Nhập số điện tiêu thụ (kWh):"));
+
+    // Tính giá điện
+    let giaTien = tinhGiaDien(soDienTieuThu);
+
+    // Hiển thị kết quả
+    alert("Giá điện cho " + soDienTieuThu + " kWh là: " + giaTien + " VND");
+</script>
+</body>
+</html>

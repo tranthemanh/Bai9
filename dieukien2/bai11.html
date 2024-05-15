@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhThueThuNhap(mucThuNhap) {
+        let thue = 0;
+
+        if (mucThuNhap <= 5000) {
+            thue = mucThuNhap * 0.05;
+        } else if (mucThuNhap <= 10000) {
+            thue = 5000 * 0.05 + (mucThuNhap - 5000) * 0.1;
+        } else if (mucThuNhap <= 20000) {
+            thue = 5000 * 0.05 + 5000 * 0.1 + (mucThuNhap - 10000) * 0.15;
+        } else {
+            thue = 5000 * 0.05 + 5000 * 0.1 + 10000 * 0.15 + (mucThuNhap - 20000) * 0.2;
+        }
+
+        return thue;
+    }
+
+    // Nhập mức thu nhập từ người dùng
+    let mucThuNhap = parseFloat(prompt("Nhập mức thu nhập (VNĐ):"));
+
+    // Tính thuế thu nhập
+    let thueThuNhap = tinhThueThuNhap(mucThuNhap);
+
+    // Hiển thị kết quả
+    alert("Thuế thu nhập cho mức thu nhập " + mucThuNhap + " VNĐ là: " + thueThuNhap + " VNĐ");
+</script>
+</body>
+</html>

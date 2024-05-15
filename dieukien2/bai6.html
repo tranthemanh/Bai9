@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Nhập hệ số a và b từ người dùng
+    let a = parseFloat(prompt("Nhập hệ số a của phương trình:"));
+    let b = parseFloat(prompt("Nhập hệ số b của phương trình:"));
+
+    // Kiểm tra nếu a = 0 (phương trình thành phương trình bậc 0)
+    if (a === 0) {
+        if (b === 0) {
+            alert("Phương trình có vô số nghiệm.");
+        } else {
+            alert("Phương trình vô nghiệm.");
+        }
+    } else {
+        // Tính nghiệm của phương trình
+        let x = -b / a;
+        alert("Nghiệm của phương trình là x = " + x);
+    }
+</script>
+</body>
+</html>

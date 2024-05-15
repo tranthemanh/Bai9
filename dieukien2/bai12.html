@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+So tien ban dau: <input type="number" id="tiengoc" placeholder="So tien ban dau"> <br>
+So thang: <input type="number" id="sothang" placeholder="So thang"> <br>
+Lai suat: <input type="number" id="laisuat" placeholder="Lai suat"> <br>
+<button onclick="tinhLaiSuat()">Tinh lai suat</button>
+<p id="soTienLaiSuat"></p>
+</body>
+<script>
+    function tinhLaiSuat() {
+        let bd = document.getElementById('tiengoc').value;
+        let st = document.getElementById('sothang').value;
+        let ls = document.getElementById('laisuat').value;
+        let stls = bd*(1+ls/100)**st;
+
+        document.getElementById('soTienLaiSuat').innerHTML = stls;
+    }
+</script>
+</html>
